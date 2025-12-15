@@ -1,0 +1,124 @@
+Open PowerShell and run:
+
+cd ~\Desktop
+mkdir django_practice
+cd django_practice
+
+2. Create a NEW Virtual Environment for Django
+
+Run:
+
+python -m venv venv
+
+
+Then activate it:
+
+.\venv\Scripts\activate
+
+
+mkdir : An item with the specified name C:\Users\petsa\Desktop\django_practice already exists.
+At line:2 char:1
++ mkdir django_practice
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Users\petsa\Desktop\django_practice:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\petsa\Desktop\django_practice> python -m venv venv
+>>
+PS C:\Users\petsa\Desktop\django_practice> .\venv\Scripts\activate
+.\venv\Scripts\activate : File C:\Users\petsa\Desktop\django_practice\venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see
+about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\venv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\petsa\Desktop\django_practice>
+
+
+You should now see:
+
+(venv)
+
+3. Install Django
+
+Run:
+
+pip install django
+
+=====================================
+
+ONE-TIME SETUP (You already completed these)
+
+You never have to repeat these unless you reinstall Windows:
+
+✔ Install Python
+✔ Fix PATH issues
+✔ Fix execution policy for this session (optional)
+
+These are system-level tasks. You are done with them.
+
+🔁 STEPS YOU DO FOR EVERY NEW DJANGO PROJECT
+
+Whenever you start a new Django application, you only repeat THREE short things:
+
+1️⃣ Create a project folder (optional)
+
+Example:
+
+mkdir my_new_project
+cd my_new_project
+
+
+This is just organization.
+
+2️⃣ Create and activate a virtual environment
+
+You do repeat this because each project should have its own isolated environment:
+
+python -m venv venv
+.\venv\Scripts\activate
+
+
+(Activation often requires the same Set-ExecutionPolicy command unless you're using CMD instead of PowerShell.)
+
+3️⃣ Install Django (inside the venv)
+pip install django
+
+
+Each project gets its own Django version and dependencies.
+This prevents conflicts between projects.
+
+4️⃣ Create the Django project
+django-admin startproject mysite
+
+
+This starts your actual Django application.
+
+
+All future Django projects will take less than 60 seconds to set up.
+
+Example:
+
+mkdir new_project
+cd new_project
+python -m venv venv
+.\venv\Scripts\activate
+pip install django
+django-admin startproject app
+=====================================
+
+4. Create Your Django Project
+
+Run:
+
+django-admin startproject mysite
+cd mysite
+
+5. Start the Server
+python manage.py runserver
+
+
+Open the link it gives you:
+
+http://127.0.0.1:8000/
