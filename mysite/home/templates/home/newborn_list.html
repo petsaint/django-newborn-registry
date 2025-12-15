@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newborn Registry</title>
+</head>
+<body>
+    <h1>Hospital Newborn Registry</h1>
+
+    <ul>
+        {% for newborn in newborns %}
+            <li>
+                {{ newborn.first_name }} {{ newborn.last_name }} –
+                {{ newborn.date_of_birth }} –
+                {{ newborn.gender }}
+            </li>
+        {% empty %}
+            <li>No newborn records found.</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
